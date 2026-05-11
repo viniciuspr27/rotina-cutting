@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotina de Cutting - Completa</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to right, #f0f2f5, #e0f7fa);
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.cafe { border-left: 8px solid #4dabf7; }
+.lanche { border-left: 8px solid #51cf66; }
+.almoco { border-left: 8px solid #ffd43b; }
+.janta { border-left: 8px solid #ff922b; }
+.treino { border-left: 8px solid #868e96; }
+.pos { border-left: 8px solid #51cf66; }
+
+.card input[type="checkbox"] {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #ff6b6b;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+</style>
+</head>
+<body>
+
+<!-- SEGUNDA, QUARTA, SEXTA -->
+<h2>Segunda, Quarta e Sexta (Faculdade)</h2>
+<div class="cards-container">
+  <div class="card cafe">
+    <input type="checkbox">
+    <h3>🍳 Café - 07:00</h3>
+    <p>2 ovos (140) + pão integral (140) + banana (90)</p>
+    <strong>370 kcal</strong>
+  </div>
+
+  <div class="card lanche">
+    <input type="checkbox">
+    <h3>🥤 Lanche - 11:00</h3>
+    <p>Pão + proteína (iogurte/ovo/queijo) <br>OU Whey (120) + banana (90)</p>
+    <strong>210–280 kcal</strong>
+  </div>
+
+  <div class="card almoco">
+    <input type="checkbox">
+    <h3>🍗 Almoço - 13:00</h3>
+    <p>Proteína + carboidrato + salada (ex.: frango 150g + arroz 100g + legumes)</p>
+    <strong>430 kcal</strong>
+  </div>
+
+  <div class="card lanche">
+    <input type="checkbox">
+    <h3>🍝 Refeição - 16:00</h3>
+    <p>Macarrão + carne/frango + legumes <br>OU Whey (120) + banana (90)</p>
+    <strong>240–450 kcal</strong>
+  </div>
+
+  <div class="card treino">
+    <input type="checkbox">
+    <h3>🏋️ Treino - 17:00</h3>
+    <p>Musculação (rápido)</p>
+  </div>
+
+  <div class="card janta">
+    <input type="checkbox">
+    <h3>🍽️ Janta - 18:00–23:00</h3>
+    <p>Carboidrato + proteína + salada (ex.: arroz 100g + frango 150g + legumes)</p>
+    <strong>450 kcal</strong>
+  </div>
+
+  <div class="card pos">
+    <input type="checkbox">
+    <h3>🥣 Pós - 23:00</h3>
+    <p>Iogurte 170g (120) + aveia 30g (120) + mel 10g (60)</p>
+    <strong>300 kcal</strong>
+  </div>
+</div>
+
+<!-- TERÇA E QUINTA -->
+<h2>Terça e Quinta (Treino + Aula Online)</h2>
+<div class="cards-container">
+  <div class="card cafe">
+    <input type="checkbox">
+    <h3>🍳 Café - 07:00</h3>
+    <p>2 ovos + pão integral + banana</p>
+    <strong>370 kcal</strong>
+  </div>
+
+  <div class="card lanche">
+    <input type="checkbox">
+    <h3>🥤 Lanche - 11:00</h3>
+    <p>Pão + proteína <br>OU Whey + banana</p>
+    <strong>210–280 kcal</strong>
+  </div>
+
+  <div class="card almoco">
+    <input type="checkbox">
+    <h3>🍗 Almoço - 13:00</h3>
+    <p>Proteína + carboidrato + salada</p>
+    <strong>430 kcal</strong>
+  </div>
+
+  <div class="card lanche">
+    <input type="checkbox">
+    <h3>🍝 Pré - 16:00</h3>
+    <p>Macarrão + proteína <br>OU Whey + aveia 30g</p>
+    <strong>240–450 kcal</strong>
+  </div>
+
+  <div class="card treino">
+    <input type="checkbox">
+    <h3>🏋️ Treino - 18:00</h3>
+    <p>Musculação + cardio</p>
+  </div>
+
+  <div class="card pos">
+    <input type="checkbox">
+    <h3>🥤 Pós - 19:30</h3>
+    <p>Whey + banana</p>
+    <strong>210 kcal</strong>
+  </div>
+
+  <div class="card treino">
+    <input type="checkbox">
+    <h3>💻 Aula Online - Noite</h3>
+    <p>—</p>
+  </div>
+
+  <div class="card janta">
+    <input type="checkbox">
+    <h3>🍽️ Janta - 21:00</h3>
+    <p>Proteína + pouco carboidrato (ex.: frango 150g + arroz 50g + salada)</p>
+    <strong>350 kcal</strong>
+  </div>
+</div>
+
+<!-- SÁBADO -->
+<h2>Sábado</h2>
+<div class="cards-container">
+  <div class="card cafe">
+    <input type="checkbox">
+    <h3>🍳 Café - 08:00</h3>
+    <p>3 ovos + 2 fatias pão integral + mamão 100g + café</p>
+    <strong>500 kcal</strong>
+  </div>
+
+  <div class="card lanche">
+    <input type="checkbox">
+    <h3>🥤 Lanche - 11:30</h3>
+    <p>Pão integral + queijo 30g + peito de peru 50g + tomate</p>
+    <strong>300 kcal</strong>
+  </div>
+
+  <div class="card almoco">
+    <input type="checkbox">
+    <h3>🍗 Almoço - 13:30</h3>
+    <p>Frango 150g + arroz 100g + feijão 50g + legumes</p>
+    <strong>530 kcal</strong>
+  </div>
+
+  <div class="card lanche">
+    <input type="checkbox">
+    <h3>🍝 Pré - 16:30</h3>
+    <p>Macarrão integral 100g + carne moída 150g + legumes</p>
+    <strong>470 kcal</strong>
+  </div>
+
+  <div class="card treino">
+    <input type="checkbox">
+    <h3>🏋️ Treino - 17:30</h3>
+    <p>Musculação + cardio</p>
+  </div>
+
+  <div class="card pos">
+    <input type="checkbox">
+    <h3>🥤 Pós - 18:30</h3>
+    <p>Whey + banana</p>
+    <strong>210 kcal</strong>
+  </div>
+
+  <div class="card janta">
+    <input type="checkbox">
+    <h3>🍽️ Janta - 21:00</h3>
+    <p>Peixe 150g + batata cozida 100g + salada</p>
+    <strong>420 kcal</strong>
+  </div>
+</div>
+
+<!-- DOMINGO -->
+<h2>Domingo</h2>
+<div class="cards-container">
+  <div class="card cafe">
+    <input type="checkbox">
+    <h3>🍳 Café - 08:00</h3>
+    <p>2 ovos + pão integral + mamão 100g + café</p>
+    <strong>330 kcal</strong>
+  </div>
+
+  <div class="card lanche">
+    <input type="checkbox">
+    <h3>🥤 Lanche - 11:30</h3>
+    <p>Iogurte 170g + aveia 30g + mel 10g</p>
+    <strong>300 kcal</strong>
+  </div>
+
+  <div class="card almoco">
+    <input type="checkbox">
+    <h3>🍗 Almoço - 13:30</h3>
+    <p>Frango 150g + arroz 100g + feijão 50g + legumes</p>
+    <strong>530 kcal</strong>
+  </div>
+
+  <div class="card lanche">
+    <input type="checkbox">
+    <h3>🍝 Pré - 16:30</h3>
+    <p>Macarrão integral 100g + carne moída 150g + legumes</p>
+    <strong>470 kcal</strong>
+  </div>
+
+  <div class="card treino">
+    <input type="checkbox">
+    <h3>🏋️ Treino - 17:30</h3>
+    <p>Musculação leve / cardio</p>
+  </div>
+
+  <div class="card pos">
+    <input type="checkbox">
+    <h3>🥤 Pós - 18:30</h3>
+    <p>Whey + banana</p>
+    <strong>210 kcal</strong>
+  </div>
+
+  <div class="card janta">
+    <input type="checkbox">
+    <h3>🍽️ Janta - 21:00</h3>
+    <p>Peixe 150g + batata cozida 100g + salada</p>
+    <strong>420 kcal</strong>
+  </div>
+</div>
+
+<!-- LEMBRETE DE ÁGUA COM GARRAFAS -->
+<h2>Lembrete de Água 💧</h2>
+<div class="cards-container">
+  <div class="card pos">
+    <input type="checkbox">
+    <h3>Beber água</h3>
+    <p>Meta diária: 4 garrafas de 700 ml</p>
+    <button onclick="tomouAgua()">Tomei água (700 ml)</button>
+    <p id="contadorAgua">💧💧💧💧</p>
+    <p id="aguaMensagem"></p>
+  </div>
+</div>
+
+<!-- CALCULADORA DE IMC -->
+<h2>Calculadora de IMC ⚖️</h2>
+<div class="cards-container">
+  <div class="card pos">
+    <h3>Calculadora de IMC</h3>
+    <label for="peso">Peso (kg): </label>
+    <input type="number" id="peso" step="0.1"><br><br>
+    <label for="altura">Altura (m): </label>
+    <input type="number" id="altura" step="0.01"><br><br>
+    <button onclick="calcularIMC()">Calcular IMC</button>
+    <p id="resultadoIMC"></p>
+  </div>
+</div>
+
+<script>
+// Checkbox persistente
+const checkboxes = document.querySelectorAll("input[type='checkbox']");
+window.onload = () => {
+  checkboxes.forEach((cb, i) => {
+    const salvo = localStorage.getItem("check_" + i);
+    if (salvo === "true") { cb.checked = true; marcar(cb); }
+  });
+};
+
+checkboxes.forEach((cb, i) => {
+  cb.addEventListener("change", () => {
+    localStorage.setItem("check_" + i, cb.checked);
+    marcar(cb);
+  });
+});
+
+function marcar(cb) {
+  const card = cb.parentElement;
+  card.classList.toggle("completed", cb.checked);
+}
+
+// Contador de garrafas de água
+let metaGarrafas = 4;
+let garrafasTomadas = 0;
+
+function atualizarAgua() {
+  let display = "";
+  for (let i = 0; i < garrafasTomadas; i++) display += "🍼";
+  for (let i = garrafasTomadas; i < metaGarrafas; i++) display += "💧";
+  document.getElementById("contadorAgua").innerText = display;
+  if (garrafasTomadas >= metaGarrafas) {
+    document.getElementById("aguaMensagem").innerText = "✅ Meta diária atingida!";
+  } else {
+    document.getElementById("aguaMensagem").innerText = `${garrafasTomadas} de ${metaGarrafas} garrafas consumidas`;
+  }
+}
+
+function tomouAgua() {
+  if (garrafasTomadas < metaGarrafas) garrafasTomadas++;
+  atualizarAgua();
+}
+
+// Calculadora de IMC
+function calcularIMC() {
+  const peso = parseFloat(document.getElementById("peso").value);
+  const altura = parseFloat(document.getElementById("altura").value);
+  if (!peso || !altura) {
+    document.getElementById("resultadoIMC").innerText = "⚠️ Preencha peso e altura!";
+    return;
+  }
+  const imc = peso / (altura * altura);
+  let classificacao = "";
+  if (imc < 18.5) classificacao = "Abaixo do peso";
+  else if (imc < 25) classificacao = "Peso normal";
+  else if (imc < 30) classificacao = "Sobrepeso";
+  else classificacao = "Obesidade";
+  document.getElementById("resultadoIMC").innerText = `IMC: ${imc.toFixed(2)} → ${classificacao}`;
+}
+
+// Inicializa display da água
+atualizarAgua();
+</script>
+
+</body>
+</html>
